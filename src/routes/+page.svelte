@@ -50,8 +50,6 @@
   let addToCart = (id: number) => {
     const product = products.find((product: Product) => product.id == id);
     cartItems = [...cartItems, { ...(product as Product), quantity: 1 }];
-    console.log(product);
-    console.log(cartItems);
   };
   const removeFromCart = (id: number) => {
     cartItems = cartItems.filter((cartItem) => cartItem.id !== id);
