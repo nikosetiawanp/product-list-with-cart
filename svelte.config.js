@@ -1,17 +1,19 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
+const dev = process.env.NODE_ENV === 'development'; 
+
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html',
+			fallback: null,
 			precompress: false
 		}),
 		paths: {
-			base: '/product-list-with-cart'
+			base: dev ? '' : '/product-list-with-cart'
 		}
 	}
 };

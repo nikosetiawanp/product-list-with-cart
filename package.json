@@ -36,5 +36,6 @@
 		"plugins": [
 			"prettier-plugin-tailwindcss"
 		]
-	}
+	},
+	"homepage": "https://nikosetiawanp.github.io/product-list-with-cart"
 }
