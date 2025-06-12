@@ -3,5 +3,6 @@ import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-	plugins: [sveltekit(), tailwindcss()]
+	plugins: [sveltekit(), tailwindcss()],
+	base: process.env.NODE_ENV === 'production' ? '/product-list-with-cart/' : '/',
 });

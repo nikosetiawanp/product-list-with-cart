@@ -8,12 +8,11 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: 'index.html',
-			precompress: false,
-			strict: true
+			precompress: false
 		}),
 		paths: {
-            base: process.env.NODE_ENV === 'production' ? '/sveltekit-github-pages' : '',
-		},
+			base: '/product-list-with-cart'
+		}
 	}
 };
 
